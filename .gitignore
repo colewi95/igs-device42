@@ -1,0 +1,21 @@
+vendor/
+scratch/
+*/provider.tf
+*.backup
+
+*/private.yml
+private.yml
+
+# Terragrunt
+.terraform.lock.hcl
+.terragrunt-cache
+terragrunt-debug.tfvars.json
+
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+
+# other
+.vscode
+*.tmp
