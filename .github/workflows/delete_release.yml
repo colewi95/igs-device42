@@ -1,0 +1,15 @@
+name: delete_release
+on:
+  push:
+    branches:
+      - master
+jobs:
+  delete_release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dev-drprasad/delete-older-releases@v0.2.0
+      with:
+        repo: chopnico/terraform-provider-igs-device42
+        keep_latest: 4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
